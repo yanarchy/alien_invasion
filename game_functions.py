@@ -18,6 +18,10 @@ def fire_bullet(ai_settings, screen, ship, bullets):
         new_bullet = Bullet(ai_settings, screen, ship)
         bullets.add(new_bullet)
 
+def check_collision(ship, alien):
+    if ship.rect.top < alien.rect.bottom:
+        print('collision!')
+
 def check_keyup_events(event, ship):
     if event.key == pygame.K_RIGHT:
         ship.moving_right = False
@@ -48,6 +52,9 @@ def update_screen(ai_settings, screen, ship, bullets, alien):
 
     # Make the most recently drawn screen visible
     pygame.display.flip()
+
+def lose():
+    screen.fill(50, 50, 50)
 
 def update_bullets(bullets):
     """Update position of bullets and get rid of old bullets"""

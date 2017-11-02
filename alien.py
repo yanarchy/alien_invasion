@@ -26,5 +26,5 @@ class Alien():
     self.screen.blit(self.image, self.rect)
 
   def update(self):
-    self.y += 2
+    self.y += 10
     self.rect.y = self.y

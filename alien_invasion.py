@@ -23,13 +23,17 @@ def run_game():
     # Make a group to store bullets in.
     bullets = Group()
 
+    gaming = True
     #Start the main loop for the game
-    while True:
+    while gaming:
         gf.check_events(ai_settings, screen, ship, bullets)
         ship.update()
         alien.update()
+        gf.check_collision(ship, alien)
         gf.update_bullets(bullets)
         gf.update_screen(ai_settings, screen, ship, bullets, alien)
 
+    if gaming == false:
+        gf.lose()
 
 run_game()
