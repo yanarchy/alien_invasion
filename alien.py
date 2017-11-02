@@ -7,7 +7,7 @@ class Alien():
     self.screen = screen
     self.ai_settings = ai_settings
 
-    self.image = pygame.image.load('alien.bmp')
+    self.image = pygame.image.load('./assets/alien.bmp')
     self.rect = self.image.get_rect()
     self.screen_rect = screen.get_rect()
 

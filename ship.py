@@ -8,17 +8,14 @@ class Ship():
     self.ai_settings = ai_settings
 
     #Load the ship image and get its rect.
-    self.image = pygame.image.load('ship.bmp')
+    self.image = pygame.image.load('./assets/ship.bmp')
     self.rect = self.image.get_rect()
     self.screen_rect = screen.get_rect()
 
     #Start a new ship at the bottom of the screen
     self.rect.centerx = self.screen_rect.centerx
     self.rect.bottom = self.screen_rect.bottom
-    print(self.rect.bottom)
-    print(self.rect.top)
-    print(self.screen_rect)
-    print(self.rect)
+
     #Store a decimal value for the ship's center
     self.center = float(self.rect.centerx)
 
