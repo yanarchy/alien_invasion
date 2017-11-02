@@ -37,13 +37,14 @@ def check_events(ai_settings, screen, ship, bullets):
             check_keyup_events(event, ship)
 
 
-def update_screen(ai_settings, screen, ship, bullets):
+def update_screen(ai_settings, screen, ship, bullets, alien):
     #Redraw thescreen through the loop
     screen.fill(ai_settings.bg_color)
     #Redraw all bullets behind ship and aliens
     for bullet in bullets.sprites():
         bullet.draw_bullet()
     ship.blitme()
+    alien.blitme()
 
     # Make the most recently drawn screen visible
     pygame.display.flip()
