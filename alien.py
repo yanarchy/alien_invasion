@@ -1,4 +1,5 @@
 import pygame
+import random
 
 class Alien():
 
@@ -13,5 +14,17 @@ class Alien():
     self.rect.centerx = self.screen_rect.centerx
     self.rect.top = self.screen_rect.top
 
+    self.center = float(self.rect.centerx)
+
+    self.y = float(self.rect.y)
+
+    self.moving_right = 0
+    self.moving_left = 0
+    self.moving_down = 0
+
   def blitme(self):
     self.screen.blit(self.image, self.rect)
+
+  def update(self):
+    self.y += 2
+    self.rect.y = self.y
