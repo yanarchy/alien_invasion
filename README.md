@@ -2,6 +2,8 @@
 
 Playing around with Python.
 
+![ship](ship.bmp)
+
 ## Environment Setup
 
 ### Dependencies
