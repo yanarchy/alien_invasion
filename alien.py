@@ -1,9 +1,10 @@
 import pygame
-import random
+from pygame.sprite import Sprite
 
-class Alien():
+class Alien(Sprite):
 
   def __init__(self, ai_settings, screen):
+    Sprite.__init__(self)
     self.screen = screen
     self.ai_settings = ai_settings
 

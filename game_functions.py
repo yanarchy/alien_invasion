@@ -19,7 +19,7 @@ def fire_bullet(ai_settings, screen, ship, bullets):
         bullets.add(new_bullet)
 
 def check_collision(ship, alien):
-    if ship.rect.top < alien.rect.bottom:
+    if pygame.sprite.collide_rect(ship, alien):
         print('collision!')
 
 def check_keyup_events(event, ship):

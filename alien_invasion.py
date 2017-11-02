@@ -26,14 +26,11 @@ def run_game():
     gaming = True
     #Start the main loop for the game
     while gaming:
+        gf.check_collision(ship, alien)
         gf.check_events(ai_settings, screen, ship, bullets)
         ship.update()
         alien.update()
-        gf.check_collision(ship, alien)
         gf.update_bullets(bullets)
         gf.update_screen(ai_settings, screen, ship, bullets, alien)
-
-    if gaming == false:
-        gf.lose()
 
 run_game()

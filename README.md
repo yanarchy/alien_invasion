@@ -2,7 +2,7 @@
 
 Playing around with Python.
 
-![ship](ship.bmp)
+![ship](./assets/ship.bmp)
 
 ## Environment Setup
 
